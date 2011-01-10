@@ -8,7 +8,7 @@ colorscheme ir_black
 set background=dark
 set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
-"filetype on           " Enable filetype detection
+filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set expandtab
@@ -56,6 +56,7 @@ set cursorline
 
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}%#ErrorMsg#%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}%*%=%-16(\ %l,%c-%v\ %)%P
+set statusline+=%{rvm#statusline()}
 
 set tags+=../tags,../../tags,../../../tags,../../../../tags,tmp/tags
 set visualbell
@@ -69,7 +70,7 @@ augroup RUBY
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
   " next line causes macvim to crash :(
-"  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+  " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 augroup END
 
