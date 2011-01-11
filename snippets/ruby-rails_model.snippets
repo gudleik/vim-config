@@ -1,1 +1,77 @@
-../bundle/vim-snipmate-ruby-snippets.git/ruby-rails_model.snippets
+# ActiveRecord
+
+# associations
+snippet bt
+	belongs_to :${1}
+snippet ho
+	has_one :${1}
+snippet hm
+	has_many :${1}
+snippet habtm
+	has_and_belongs_to_many :${1}
+snippet hmt
+	has_many :${1:association}, :through => ${2}
+
+# other
+snippet anaf
+	accepts_nested_attributes_for :${1}
+
+# validations
+snippet vpo
+	validates_presence_of :${1:attribute}
+snippet vpos
+	validates_presence_of :${1:attribute}, :scope => ${2:scope}
+snippet vuniq
+	validates_uniqueness_of :${1:attribute}
+snippet vuniqs
+	validates_uniqueness_of :${1:attribute}, :scope => ${2:scope}
+snippet vacc
+	validates_acceptance_of :${1:attribute}
+snippet vass
+	validates_associated :${1:association}
+snippet vconfirm
+	validates_confirmation_of :${1:attribute}
+snippet vexclus
+	validates_exclusion_of :${1:attribute}, :in => ${2:range}
+snippet vformat
+	validates_format_of :${1:attribute}, :with => /${2:regex}/i
+snippet vinclus
+	validates_inclusion_of :${1:attribute}, :in => ${2:range}
+snippet vlength
+	validates_length_of :${1:attribute}, ${2}
+snippet vnumeric
+	validates_numericality_of :${1:attribute}
+snippet vaw
+	validates_with ${1:ValidatorClass}
+snippet vae
+	validates_each :${1:attribute}, :${2:attribute} do |model, attr, value|
+		model.errors.add(attr, '${3:error}') if value =~ /${4:regex}/
+	end
+
+# Callbacks
+snippet afc after_create
+	after_create :${1}
+snippet afs after_save
+	after_save :${1}
+snippet afu after_update
+	after_update :${1}
+snippet bfs before_save
+	before_save :${1}
+snippet bfu before_update
+	before_update :${1}
+snippet afd
+	after_destroy :${1}
+snippet bfd
+	before_destroy :${1}
+snippet bfv before_validation
+	before_validation :${1}
+snippet afv after_validation
+	after_validation :${1}
+snippet afi after_initialize
+	def after_initialize
+		${1}
+	end
+snippet aff after_find
+	def after_find
+		${1}
+	end

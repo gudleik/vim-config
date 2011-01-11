@@ -2,10 +2,11 @@
 
 snippet rp
 	= render '${1:partial}'
-	
 snippet lt
 	= link_to '${1:text}', '${2:url}'
-
 snippet img
 	= image_tag '${1:url}'
-
+snippet jit
+	= javascript_include_tag :${1:defaults}
+snippet slt
+	= stylesheet_link_tag '${1:stylesheet}', :media => '${2:screen, projection}'

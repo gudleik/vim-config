@@ -91,3 +91,6 @@
 [submodule "bundle/vim-snipmate-ruby-snippets.git"]
 	path = bundle/vim-snipmate-ruby-snippets.git
 	url = git://github.com/rubiii/vim-snipmate-ruby-snippets.git
+[submodule "bundle/vim-ragtag.git"]
+	path = bundle/vim-ragtag.git
+	url = git://github.com/tpope/vim-ragtag.git
