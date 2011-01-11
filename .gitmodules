@@ -97,3 +97,9 @@
 [submodule "bundle/vim-themes.git"]
 	path = bundle/vim-themes.git
 	url = git://github.com/gudleik/vim-themes.git
+[submodule "bundle/vim-matchit.git"]
+	path = bundle/vim-matchit.git
+	url = git://github.com/tsaleh/vim-matchit.git
+[submodule "bundle/vim-snippets.git"]
+	path = bundle/vim-snippets.git
+	url = git://github.com/gudleik/vim-snippets.git

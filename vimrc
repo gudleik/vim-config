@@ -74,6 +74,8 @@ augroup RUBY
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 augroup END
 
+au BufNewFile,BufRead *_spec.rb set filetype=ruby.rspec
+
 " Plugins
 
 let Tlist_Use_Right_Window=1
