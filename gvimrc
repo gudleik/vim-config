@@ -25,12 +25,12 @@ end
 
 if has("gui_running")
   set guioptions=egmrt
-  colorscheme ir_black
+  colorscheme wombat
   set fuopt=maxhorz,maxvert
   syntax on
 
   " these are new to vim 7.3: http://groups.google.com/group/vim_announce/browse_thread/thread/66c02efd1523554b
-  set relativenumber
+  " set relativenumber
   set undofile
 endif
 
