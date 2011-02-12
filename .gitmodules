@@ -97,3 +97,6 @@
 [submodule "bundle/vim-snippets.git"]
 	path = bundle/vim-snippets.git
 	url = git://github.com/gudleik/vim-snippets.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
