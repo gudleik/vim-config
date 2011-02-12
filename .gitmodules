@@ -100,3 +100,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundle/vim-slim.git"]
+	path = bundle/vim-slim.git
+	url = git://github.com/gudleik/vim-slim.git
