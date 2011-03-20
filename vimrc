@@ -88,6 +88,7 @@ let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 let mapleader = ","
 
+nmap <silent> <Leader>p :CommandT<CR>
 map <silent> <Leader>r :!ctags --extra=+f -R *<CR><CR>
 map <Leader>s :Rake<CR>
 " map <Leader>c :.Rake<CR>
