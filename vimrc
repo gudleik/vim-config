@@ -95,6 +95,9 @@ map <Leader>s :Rake<CR>
 map <Leader>c <plug>NERDCommenterToggle
 noremap <Leader>n :NERDTreeToggle<CR>
 
+nmap <silent> <Leader>p :CommandT<CR>
+set wildignore+=*.o,*.obj,.git,tmp/sass-cache
+
 " allow a more natural style of line editing in :ex mode
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
@@ -112,3 +115,7 @@ inoremap jj <ESC>       " espape insert mode with jj
 " Makegreen
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+
+if has("autocmd")
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+endif
