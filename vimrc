@@ -76,6 +76,8 @@ augroup END
 
 au BufNewFile,BufRead *_spec.rb set filetype=ruby.rspec
 
+autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+
 " Plugins
 
 let Tlist_Use_Right_Window=1
@@ -93,7 +95,7 @@ map <silent> <Leader>r :!ctags --extra=+f -R *<CR><CR>
 map <Leader>s :Rake<CR>
 " map <Leader>c :.Rake<CR>
 map <Leader>c <plug>NERDCommenterToggle
-noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>n :Vex<CR>
 
 nmap <silent> <Leader>p :CommandT<CR>
 set wildignore+=*.o,*.obj,.git,tmp/sass-cache
@@ -115,7 +117,22 @@ inoremap jj <ESC>       " espape insert mode with jj
 " Makegreen
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+" Tabularize
+nmap <Leader>]= :Tabularize /=<CR>
+vmap <Leader>]= :Tabularize /=<CR>
+nmap <Leader>]: :Tabularize /:\zs<CR>
+vmap <Leader>]: :Tabularize /:\zs<CR>
 
-if has("autocmd")
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
-endif
+" Auto tabularize when entering |
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
+

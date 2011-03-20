@@ -9,7 +9,8 @@ if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
   set guifont=Monaco:h13
-  set guifont=DejaVu\ Sans\ Mono:h14
+  set guifont=Menlo:h13
+  " set guifont=DejaVu\ Sans\ Mono:h14
   set guioptions-=T  " remove toolbar
   set stal=2 " turn on tabs by default
 
@@ -25,7 +26,8 @@ end
 
 if has("gui_running")
   set guioptions=egmrt
-  colorscheme wombat
+  " colorscheme wombat
+  colorscheme mac_classic
   set fuopt=maxhorz,maxvert
   syntax on
 
