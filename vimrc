@@ -165,3 +165,5 @@ function! s:align()
   endif
 endfunction
 
+map   <silent> <F5> mmgg=G`m^
+imap  <silent> <F5> <Esc> mmgg=G`m^
