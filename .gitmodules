@@ -100,3 +100,27 @@
 [submodule "bundle/tabular.git"]
 	path = bundle/tabular.git
 	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-greplace"]
+	path = bundle/vim-greplace
+	url = git://github.com/skwp/greplace.vim.git
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = git://github.com/thePapacy/vim-css-color.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/Color-Sampler-Pack"]
+	path = bundle/Color-Sampler-Pack
+	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "bundle/css.vim"]
+	path = bundle/css.vim
+	url = git://github.com/xenoterracide/css.vim.git
+[submodule "bundle/vim-extradite"]
+	path = bundle/vim-extradite
+	url = git://github.com/int3/vim-extradite.git
