@@ -100,6 +100,9 @@ noremap <Leader>n :Vex<CR>
 nmap <silent> <Leader>p :CommandT<CR>
 set wildignore+=*.o,*.obj,.git,tmp/sass-cache
 
+map <D-r> :CommandTFlush<CR>
+nmap <silent> <Leader>p :CommandT<CR>
+
 " allow a more natural style of line editing in :ex mode
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
