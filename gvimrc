@@ -28,8 +28,10 @@ end
 if has("gui_running")
   set guioptions=egmrt
   " colorscheme wombat
-  colorscheme mac_classic
-  colorscheme ir_black
+  " colorscheme mac_classic
+  " colorscheme ir_black
+  set background=light
+  colorscheme solarized
   set fuopt=maxhorz,maxvert
   syntax on
 
