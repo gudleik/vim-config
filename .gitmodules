@@ -130,3 +130,6 @@
 [submodule "bundle/vim-colors-solarized.git"]
 	path = bundle/vim-colors-solarized.git
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-coffee-script.git"]
+	path = bundle/vim-coffee-script.git
+	url = git://github.com/grayrest/vim-coffee-script.git
