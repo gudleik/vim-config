@@ -37,7 +37,7 @@ if has("gui_running")
 
   " these are new to vim 7.3: http://groups.google.com/group/vim_announce/browse_thread/thread/66c02efd1523554b
   " set relativenumber
-  set undofile
+  " set undofile
 endif
 
 

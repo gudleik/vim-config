@@ -133,3 +133,6 @@
 [submodule "bundle/vim-coffee-script.git"]
 	path = bundle/vim-coffee-script.git
 	url = git://github.com/grayrest/vim-coffee-script.git
+[submodule "bundle/nerdtree.git"]
+	path = bundle/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git

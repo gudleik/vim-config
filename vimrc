@@ -95,13 +95,19 @@ map <silent> <Leader>r :!ctags --extra=+f -R *<CR><CR>
 map <Leader>s :Rake<CR>
 " map <Leader>c :.Rake<CR>
 map <Leader>c <plug>NERDCommenterToggle
-noremap <Leader>n :Vex<CR>
+" noremap <Leader> :Vex<CR>ERDTree
+map <silent> <Leader>n :NERDTreeToggle<CR>
 
-nmap <silent> <Leader>p :CommandT<CR>
+
+" Command-T
 set wildignore+=*.o,*.obj,.git,tmp/sass-cache
-
+" Cmd-R: Reload commandT
 map <D-r> :CommandTFlush<CR>
+" Leader p: CommandT
 nmap <silent> <Leader>p :CommandT<CR>
+
+" CRTL-L: Redraw screen and hide highlighted search (nohlsearch)
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " allow a more natural style of line editing in :ex mode
 cnoremap <C-A> <Home>
